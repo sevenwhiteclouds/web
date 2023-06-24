@@ -1,0 +1,37 @@
+body 
+{
+  background-color: #0e1214;
+  font-family: arial;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+}
+
+button
+{
+  width: 200px;
+  height: 120px;
+  font-size: 50px;
+}
+
+.paper, .scissors
+{
+  margin-left: 50px;
+}
+
+.game_state
+{
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}

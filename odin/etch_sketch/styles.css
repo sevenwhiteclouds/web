@@ -1,0 +1,49 @@
+body
+{
+  background-color: white;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+button
+{
+  margin-top: 10px;
+  margin-bottom: 60px;
+  font-size: 50px;
+}
+
+.grid
+{
+  width: 800px;
+  height: 800px;
+  display: flex;
+  background-color: grey;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.rows
+{
+  width: 100%;
+  display: flex;
+}
+
+.columns
+{
+  width: 100%;
+}
+
+.columns_colored
+{
+  width: 100%;
+  background-color: white;
+}
+
+
+

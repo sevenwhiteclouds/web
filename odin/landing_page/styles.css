@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body
+{
+  font-family: 'Roboto';
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #1f2937;
+}
+
+.links
+{
+  margin-top: 1%;
+  margin-right: 14.4%;
+  font-size: 18px;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo
+{
+  margin-left: 14.4%;
+  margin-top: 1%;
+  color: #f9faf8;
+  font-size: 24px;
+}
+
+.info_header
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f2937;
+  width: 100%;
+}
+
+.left_content
+{
+  margin-left: 14.4%;
+  margin-top: 6.27%;
+  margin-bottom: 6.95%;
+  width: 30%;
+}
+
+.left_content button
+{
+  margin-top: 5px;
+  background-color: #3882f6; 
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: solid;
+  border-color: #3882f6;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.right_content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14.4%;
+  margin-top: 6.27%;
+  margin-bottom: 6.95%;
+  width: 36%;
+  background-color: #6d747d;
+  color: #e5e7eb;
+}
+
+.main_txt
+{
+  color: #f9faf8;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.sub_txt
+{
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+.rando_info_sec
+{
+  background-color: white;
+}
+
+.two_parts
+{
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.8%;
+  margin-bottom: 6.38%;
+  margin-left: 21.59%;
+  margin-right: 21.59%;
+}
+
+.top_element
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bottom_element
+{
+  margin-top: 2.98%;
+  display: flex;
+  justify-content: center;
+}
+
+.box_and_txt
+{
+  width: 11.66%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading_text
+{
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.box_and_txt_one, .box_and_txt_two, .box_and_txt_three, .box_and_txt_three, .box_and_txt_four
+{
+  margin-left: 3.47%;
+}
+
+.box_and_txt_one
+{
+  margin-left: 0%;
+}
+
+.box_txt
+{
+  color: #1f2937;
+  margin-top: 0.52%;
+  margin-left: 2px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.empty_box
+{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-width: 3px;
+  border-color: #3882f6;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.inspo_quote_section
+{
+  background-color: #e5e7eb;
+}
+
+.everything_quote_container
+{
+  margin-left: 23.68%;
+  margin-right: 21.52%;
+  margin-top: 7.21%;
+  margin-bottom: 5.59%;
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+}
+
+.actual_quote
+{
+  font-size: 36px;
+  font-weight: lighter;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.by_who
+{
+  margin-right: 5%;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.call_action
+{
+  background-color: #ffff;
+}
+
+.inner_box
+{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 14.4%;
+  margin-right: 14.4%;
+  margin-top: 8.10%;
+  margin-bottom: 8.10%;
+  border-radius: 7px;
+  background: #3882f6;
+}
+
+.call_action_left_content
+{
+  margin-top: 2.87%;
+  margin-bottom: 2.5%;
+  margin-left: 8.33%;
+}
+
+.call_action_main_txt
+{
+  color: #f9faf8; 
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.call_action_sub_txt
+{
+  color: #e5e7eb; 
+  font-size: 18px;
+}
+
+.call_action_right_content
+{
+  margin-right: 8.33%;
+  margin-top: 2.87%;
+  margin-bottom: 2.5%;
+}
+
+.call_action_button button
+{
+  background-color: #3882f6; 
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.footer
+{
+  display: flex;
+  font-size: 18px;
+  color: #e5e7eb;
+  background-color: #1f2937;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright
+{
+  margin-top: 2.24%;
+  margin-bottom: 2.09%;
+}
