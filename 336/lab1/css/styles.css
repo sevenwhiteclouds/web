@@ -3,6 +3,12 @@ body {
   color: gray;
 }
 
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 4em;
+  margin-bottom: 0px;
+}
+
 header, main, nav, footer {
   text-align: center;
 }
