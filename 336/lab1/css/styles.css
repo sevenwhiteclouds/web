@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #0b1417;
   color: gray;
 }
 
@@ -28,7 +28,7 @@ nav a:hover {
 }
 
 nav .current {
-  color: green;
+  color: #ff9e64;
 }
 
 main {
@@ -36,12 +36,12 @@ main {
   justify-content: center;
 }
 
-/* TODO: instead of using px use something that bases itself off of the view size */
 footer {
   font-size: 12px;
   display: flex;
   justify-content: center;
   gap: 8px;
+  color: #bb9af7;
 }
 
 footer img {
@@ -75,6 +75,12 @@ ul {
   margin: 0 auto;
   text-align: left;
 }
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
 
 .hobby {
   color: yellow;
