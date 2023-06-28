@@ -1,7 +1,3 @@
-/* * {
-  border: 1px solid black;
-} */
-
 body {
   display: flex;
   flex-direction: column;
@@ -70,21 +66,29 @@ address a {
   padding-left: 4px;
   padding-right: 4px;
   text-decoration: none;
-  color: black;
-  background-color: #ffb700;
+  color: white;
+  background-color: #137752;
   box-shadow: 2px 2px #bbb;
 }
 
-.middle_source {
-  border: 1px solid black;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 4px;
-  padding-right: 4px;
-  text-decoration: none;
+#source_phil {
   color: black;
   background-color: #ffb700;
-  box-shadow: 2px 2px #bbb;
+}
+
+#source_his {
+  background-color: #e62f2e;
+}
+
+#heart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#heart a:hover {
+  transition: .9s;
 }
 
 .middle_content_1 {
