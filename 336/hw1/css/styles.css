@@ -1,0 +1,42 @@
+/* * { border: 1px solid black; } */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+}
+
+.content {
+  width: 50%;
+}
+
+.content header {
+  font-weight: bold;
+}
+
+.content nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.content nav a {
+  border: 1px solid black;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 2px 2px #bbb;
+}
+
+.current {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
