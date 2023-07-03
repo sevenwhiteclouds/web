@@ -30,7 +30,7 @@ function rightAnswer(index) {
   document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
   document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png' alt='Checkmark'>";
 
-  score += 20;
+  score += 10;
 }
 
 function wrongAnswer(index) {
@@ -50,7 +50,13 @@ function gradeQuiz() {
   let q1Response = document.querySelector("#q1").value.toLowerCase();
   let q2Response = document.querySelector("#q2").value;
   let q4Response = document.querySelector("input[name=q4]:checked").value;
-  console.log(q2Response);
+
+  let q5Response = document.querySelector("#q5").value.toLowerCase();
+  let q7Response = document.querySelector("#q7").value;
+  let q8Response = document.querySelector("input[name=q8]:checked").value;
+  let q9Response = document.querySelector("#q9").value.toLowerCase();
+  let q10Response = document.querySelector("#q10").value;
+  //console.log(q5Response);
 
   if (q1Response == "sacramento") {
     rightAnswer(1);
@@ -75,6 +81,43 @@ function gradeQuiz() {
     rightAnswer(4);
   } else {
     wrongAnswer(4);
+  }
+
+  if (q5Response == "pacific" || q5Response == "pacific ocean") {
+    rightAnswer(5);
+  } else {
+    wrongAnswer(5);
+  }
+
+  if (document.querySelector("#Central").checked && document.querySelector("#Pacific").checked && 
+      document.querySelector("#Eastern").checked && !document.querySelector("#MiddleEast").checked) {
+    rightAnswer(6);
+  } else {
+    wrongAnswer(6);
+  }
+
+  if (q7Response == "Mexico") {
+    rightAnswer(7);
+  } else {
+    wrongAnswer(7);
+  }
+
+  if (q8Response == "Nevada") {
+    rightAnswer(8);
+  } else {
+    wrongAnswer(8);
+  }
+
+  if (q9Response == "48") {
+    rightAnswer(9);
+  } else {
+    wrongAnswer(9);
+  }
+
+  if (q10Response == "Big Apple") {
+    rightAnswer(10);
+  } else {
+    wrongAnswer(10);
   }
 
   document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
