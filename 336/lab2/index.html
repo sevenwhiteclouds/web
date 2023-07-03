@@ -7,8 +7,8 @@
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
   </head>
 
-  <body class="text-center">
-    <h1 class="p-5 bg-info">US Geography Quiz</h1>
+  <body class="text-center bg-light">
+    <h1 class="p-5 bg-warning">US Geography Quiz</h1>
     <br> 
     <h3><span id="markImg1"></span>What is the capital of California?</h3>
     <input type="text" id="q1">
@@ -55,7 +55,7 @@
     <input type="checkbox" id="Central"> <label for="Central">Central Standard Time</label>
     <input type="checkbox" id="Pacific"> <label for="Pacific">Pacific Standard Time</label>
     <input type="checkbox" id="Eastern"> <label for="Eastern">Eastern Standard Time</label>
-    <input type="checkbox" id="MiddleEast"> <label for="Middle East">Middle East Time</label>
+    <input type="checkbox" id="MiddleEast"> <label for="MiddleEast">Middle East Time</label>
     <br><br>
     <div id="q6Feedback"></div>
     <br><br>
@@ -84,7 +84,7 @@
     <br><br>
 
     <!-- question 9 -->
-    <h3><span id="markImg9"></span>How many states does the contiguous United States have</h3>
+    <h3><span id="markImg9"></span>How many states does the contiguous United States have?</h3>
     <input type="text" id="q9">
     <br><br>
     <div id="q9Feedback"></div>
@@ -103,10 +103,11 @@
     <br><br>
 
     <h3 id="validationFdbk" class="bg-danger text-white"></h3>
-    <button class="btn btn-outline-primary">Submit Quiz</button>
+    <button class="btn btn-outline-dark">Submit Quiz</button>
 
     <br>
-    <h2 id="totalScore" class="text-info"></h2>
+    <h2 id="totalScore"></h2>
+    <h2 id="congrats" class="text-success"></h2>
     <h3 id="totalAttempts"></h3>
 
     <script src="js/script.js"></script>

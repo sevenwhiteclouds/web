@@ -35,12 +35,11 @@ function rightAnswer(index) {
 
 function wrongAnswer(index) {
   document.querySelector(`#q${index}Feedback`).innerHTML = "Incorrect!";
-  document.querySelector(`#q${index}Feedback`).className = "bg-warning text-white";
+  document.querySelector(`#q${index}Feedback`).className = "bg-danger text-white";
   document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/xmark.png' alt='xmark'>";
 }
 
 function gradeQuiz() {
-  console.log("Grading quiz...");
   document.querySelector("#validationFdbk").innerHTML = "";
   if (!isFormValid()) {
     return;
@@ -56,7 +55,6 @@ function gradeQuiz() {
   let q8Response = document.querySelector("input[name=q8]:checked").value;
   let q9Response = document.querySelector("#q9").value.toLowerCase();
   let q10Response = document.querySelector("#q10").value;
-  //console.log(q5Response);
 
   if (q1Response == "sacramento") {
     rightAnswer(1);
@@ -120,7 +118,20 @@ function gradeQuiz() {
     wrongAnswer(10);
   }
 
-  document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
+  let scoreInHTML = document.querySelector("#totalScore");
+  scoreInHTML.removeAttribute('class');
+  scoreInHTML.innerHTML = `Total Score: ${score}`;
+
+  if (score >= 80) {
+    scoreInHTML.classList.add("text-success");
+  } else {
+    scoreInHTML.classList.add("text-danger");
+  }
+
+  if (score > 80) {
+    document.querySelector("#congrats").innerHTML = "Nice job! Your score is among the highest.";
+  }
+
   document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
   localStorage.setItem("total_attempts", attempts);
 }
