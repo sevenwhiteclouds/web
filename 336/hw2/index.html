@@ -1,13 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>In the beginning...</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Checkout: My Cart</title>
   </head>
-
   <body>
-    <h1>Hello, World!</h1>
+    <header><h1>My Cart<h1></header>
+
+    <div class="middle">
+      <div class="main">
+        <h2>Order</h2>
+        <div id="main-orders">
+          <div class="order-items" id="item1">
+            <img src="img/hhkb2.png" alt="hhkb">
+            <p><b>HHKB</b><br>Color: White</p>
+            <p>$239.00</p>
+            <p id="quant1">Quantity: 1</p>
+            <div class="increase-decrease">
+              <button id="minus1">-</button>
+              <button id="plus1">+</button>
+            </div>
+          </div>
+          <div class="order-items" id="item2">
+            <img src="img/g5022.png" alt="g502">
+            <p><b>G502</b><br>Color: White</p>
+            <p>$159.99</p>
+            <p id="quant2">Quantity: 1</p>
+            <div class="increase-decrease">
+              <button id="minus2">-</button>
+              <button id="plus2">+</button>
+            </div>
+          </div>
+          <div class="order-items" id="item3">
+            <img src="img/m50x2.png" alt="m50x">
+            <p><b>M50X </b><br>Color: Black</p>
+            <p>$189.99</p>
+            <p id="quant3">Quantity: 1</p>
+            <div class="increase-decrease">
+              <button id="minus3">-</button>
+              <button id="plus3">+</button>
+            </div>
+          </div>
+        </div>
+
+        <h2>Delivery</h2>
+        <div id="main-delivery">
+          <div id="row1">
+            <div class="delv-opts delv-selector" id="ups">
+              <img src="img/ups2.png" alt="ups">
+              <p><b>UPS</b><br>This is our fastest option!</p>
+              <p><b>$10.25</b></p>
+            </div>
+
+            <div class="delv-opts" id="fedex">
+              <img src="img/fedex2.png" alt="fedex">
+              <p><b>FedEx</b><br>This is our second fastest option.</p>
+              <p><b>$6.20</b></p>
+            </div>
+          </div>
+          <div id="row2">
+            <div class="delv-opts" id="usps">
+              <img src="img/usps2.png" alt="usps">
+              <p><b>USPS</b><br>Will get to you, but slower.</p>
+              <p><b>$4.20</b></p>
+            </div>
+
+            <div class="delv-opts" id="pickup">
+              <img src="img/in_person2.png" alt="inperson">
+              <p><b>In Person</b><br>Don't wait, just come into the store.</p>
+              <p><b>Free</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <h2>Summary</h2>
+        <div id="sidebar-content">
+          <div class="sidebar-row">
+            <p>Order Number</p>
+            <p><b>2837471</b></p>
+          </div>
+          <hr>
+          <br>
+
+          <div class="sidebar-row">
+            <input type="text" id="discount">
+            <button id="dicount-button">Apply</button>
+          </div>
+
+          <div class="sidebar-row">
+            <p>Order Summary</p>
+            <p><b id="order-summary">$588.98</b></p>
+          </div>
+
+          <div class="sidebar-row">
+            <p>Shipping</p>
+            <p><b id="order-shipping">$10.25</b></p>
+          </div>
+
+          <div class="sidebar-row">
+            <p>Total</p>
+            <p><b id="order-total">$588.98</b></p>
+          </div>
+        </div>
+        <button id="go">Place Order</button>
+      </div>
+    </div>
+
     <script src="js/app.js"></script>
   </body>
 </html>
