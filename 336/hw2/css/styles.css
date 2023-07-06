@@ -107,3 +107,29 @@ hr {
   border-radius: 15px;
   border-color: #3886f2;
 }
+
+#discount-success {
+  display: flex;
+  justify-content: center;
+}
+
+#order-button {
+  display: flex;
+  justify-content: center;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.done img {
+  width: 500px;
+  height: 500px;
+}
+
+.done p {
+  font-size: 25px;
+}

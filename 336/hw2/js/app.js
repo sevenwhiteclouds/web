@@ -10,6 +10,8 @@ let delvSelection = 10.25;
 let item0Quant = 1;
 let item1Quant = 1;
 let item2Quant = 1;
+let discount = false;
+let orderPlaced = false;
 
 const getIds = () => {
   delvOpts.push(document.getElementById("ups"));
@@ -35,7 +37,14 @@ const getIds = () => {
 };
 
 const updateSummary = () => {
-  let orderSummary = ((item0Price * item0Quant) + (item1Price * item1Quant) + (item2Price * item2Quant));
+  let orderSummary = 0;
+
+  if (discount) {
+    orderSummary = (((item0Price * item0Quant) + (item1Price * item1Quant) + (item2Price * item2Quant))) / 2;
+  } else {
+    orderSummary = ((item0Price * item0Quant) + (item1Price * item1Quant) + (item2Price * item2Quant));
+  }
+
   orderValues[0].innerHTML = `$${orderSummary.toFixed(2)}`;
 
   if (delvSelection == 0) {
@@ -107,4 +116,28 @@ delvOpts.forEach((id) => {
 
     updateSummary();
   });
+});
+
+document.getElementById("dicount-button").addEventListener("click", () => {
+  let code = document.getElementById("discount").value;
+  let successText = document.getElementById("discount-success");
+  
+  if (code == "CST336") {
+    discount = true;
+    updateSummary();
+    successText.innerHTML = `${code} was successfully applied!`;
+  } else if (code.length == 0) {
+    discount = false;
+    successText.innerHTML = "";
+    updateSummary();
+  } else {
+    successText.innerHTML = "Not a valid code.";
+  }
+});
+
+document.getElementById("go").addEventListener("click", () => {
+  let body = document.querySelector("body");
+  body.innerHTML = "";
+  body.classList.add("done");
+  body.innerHTML = "<img src='img/success.png' alt='ordersuccess'><p>Your order has been placed! Thank you.</p>";
 });
