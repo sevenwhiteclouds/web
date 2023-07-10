@@ -1,9 +1,18 @@
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
+document.querySelector("#password").addEventListener("click", async () => {
+  let suggestHTML = document.querySelector("#passwordError");
+  let password = await (await fetch("https://csumb.space/api/suggestedPassword.php?length=8")).json();
+  suggestHTML.innerHTML = `Suggested password: ${password.password}`;
+  suggestHTML.removeAttribute("class");
+});
+
 document.querySelector("#signupForm").addEventListener("submit", function(event) {
   validateForm(event);
 });
+
+states();
 
 function validateForm(e) {
   let isValid = true;
@@ -11,12 +20,17 @@ function validateForm(e) {
   let password = document.querySelector("#password").value;
   let repassword = document.querySelector("#repassword").value;
   if (username.length == 0) {
-    document.querySelector("#usernameError").innerHTML = "Username Required!";
+    let usernameError = document.querySelector("#usernameError");
+    usernameError.removeAttribute("class");
+    usernameError.innerHTML = "Username Required!";
+    usernameError.classList.add("text-danger");
     isValid = false;
   }
 
-  if (password.length == 0) {
-    document.querySelector("#passwordError").innerHTML = "Password Required!";
+  if (password.length < 6) {
+    let passwordError = document.querySelector("#passwordError");
+    passwordError.classList.add("text-danger");
+    passwordError.innerHTML = "Password must be at least 6 characters!";
     isValid = false;
   }
 
@@ -30,31 +44,44 @@ function validateForm(e) {
   }
 }
 
+async function states() {
+  let stateHTML = document.querySelector("#state");
+  let states = await (await fetch("https://csumb.space/api/allStatesAPI.php")).json();
+  states.forEach((state) => {stateHTML.innerHTML += `<option value="${state.usps}">${state.state}</option>`});
+}
+
 async function checkUsername() {
   let username = document.querySelector("#username").value;
   let url = `https://csumb.space/api/usernamesAPI.php?username=${username}`;
   let response = await fetch(url);
   let data = await response.json();
   let usernameError = document.querySelector("#usernameError");
+  usernameError.removeAttribute("class");
   if (data.available) {
     usernameError.innerHTML = "Username available!";
-    usernameError.style.color = "green";
+    usernameError.classList.add("text-success");
   } else {
     usernameError.innerHTML = "Username not available!";
-    usernameError.style.color = "red";
+    usernameError.classList.add("text-danger");
   }
 }
 
 async function displayCity() {
-  //alert(document.querySelector("#zip").value);
   let zipCode = document.querySelector("#zip").value;
   let url = `https://csumb.space/api/cityInfoAPI.php?zip=${zipCode}`;
   let response = await fetch(url);
   let data = await response.json();
-  //console.log(data);
-  document.querySelector("#city").innerHTML = data.city;
-  document.querySelector("#latitude").innerHTML = data.latitude;
-  document.querySelector("#longitude").innerHTML = data.longitude;
+  if (data != false) {
+    document.querySelector("#zipError").innerHTML = "";
+    document.querySelector("#city").innerHTML = data.city;
+    document.querySelector("#latitude").innerHTML = data.latitude;
+    document.querySelector("#longitude").innerHTML = data.longitude;
+  } else {
+    document.querySelector("#zipError").innerHTML = "Zip code not found.";
+    document.querySelector("#city").innerHTML = "";
+    document.querySelector("#latitude").innerHTML = "";
+    document.querySelector("#longitude").innerHTML = "";
+  }
 }
 
 async function displayCounties() {
