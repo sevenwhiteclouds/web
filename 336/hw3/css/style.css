@@ -1,0 +1,169 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+  font-family: "Roboto";
+  color: white;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #3a098c;
+}
+
+#center-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+#alert {
+  margin-top: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+p {
+  margin: 0;
+}
+
+#wrapper {
+  height: 100%;
+  background: #3a098c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+header {
+  font-size: 30px;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  height: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main img {
+  margin-top: 10%;
+}
+
+#day-temp {
+  margin-left: 2.8%;
+  box-shadow: 0px 0px 10px 1px #2c2c2c;
+  border-radius: 20px;
+  background: #46baf8;
+  width: 28%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#degree-number {
+  margin-top: 10%;
+  font-size: 120px;
+  margin-top: 10%;
+  margin-left: 7%;
+}
+
+#temp-img {
+  margin-top: 10%;
+}
+
+footer {
+  margin-bottom: 3%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#current-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5%;
+  background: #ffffff47;
+  border-radius: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 8px 3px #00000038;
+}
+
+#day-date {
+  font-size: 30px;
+}
+
+#day-month {
+  font-size: 18px;
+}
+
+#location-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 13%;
+}
+
+#location-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+#search-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+#search {
+  padding: 3px;
+  border: solid;
+  border-color: #ffffff96;
+  border-width: 1px;
+  border-radius: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev, #next {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+#blur-search {
+  border-radius: 15px;
+  width: 50%;
+  height: 5%;
+  font-size: 30px;
+  color: black;
+}
