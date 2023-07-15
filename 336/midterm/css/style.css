@@ -1,0 +1,82 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #1b018b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+header img {
+  width: 215px;
+  height: 92px;
+}
+
+header p {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+main {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#user-interact {
+  display: flex;
+}
+
+#drop-downs {
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#flight-check {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#flight-input {
+  display: flex;
+}
+
+#status {
+  margin-top: 3.5rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#error {
+  margin-top: 2rem;
+  color: red;
+}

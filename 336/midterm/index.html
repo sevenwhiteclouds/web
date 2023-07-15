@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Otter Airlines</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img src="img/plane_left.png">
+        <p>Otter Airlines</p>
+        <img src="img/plane_right.png">
+      </header>
+
+      <main>
+        <p>Summer 2023 Destinations</p>
+        <div id="user-interact">
+          <div id="drop-downs">
+            <select name="country" id="drop-down-country">
+              <option value="select">Select</option>
+              <option value="cn">China</option>
+              <option value="fr">France</option>
+              <option value="mx">Mexico</option>
+              <option value="us">United States</option>
+            </select>
+            <select name="city" id="drop-down-city">
+              <option value="select">Select</option>
+            </select>
+          </div>
+          <div id="display">
+            <img id="city-image" src="">
+            <p id="display-name"></p>
+            <p id="cost"><p>
+          </div>
+        </div>
+
+        <div id="flight-check">
+          <p>Check flight status</p>
+          
+          <div id="flight-input">
+            <input type="text" id="flight-num" name="fnum" placeholder="Flight number (ex. OA101)">
+            <button id="submit">Status</button>
+          </div>
+
+          <p id="error"></p>
+          <p id="status"></p>
+        </div>
+					<table border="1" width="600" cellpadding="10px">
+						<tbody><tr>
+							<th>#</th>
+							<th>Task Description</th>
+							<th>Points</th>
+						</tr>
+						<tr style="color:red">
+							<td>1</td>
+							<td>The list of countries is displayed in random order <br></td>
+							<td width="20" align="center">20</td>
+						</tr>
+						<tr style="color:green">
+							<td>2</td>
+							<td>The list of cities is updated upon selecting a country, using the API<br>
+							</td>
+							<td width="20" align="center">30</td>
+						</tr>
+						<tr style="color:green">
+							<td>3</td>
+							<td>A random location is displayed upon loading the page. Includes image and all data <br></td>
+							<td width="20" align="center">30</td>
+						</tr>
+						<tr style="color:green">
+							<td>4</td>
+							<td>Upon selecting a city, all information is displayed (image, name, price, and departure dates) <br>
+							</td>
+							<td width="20" align="center">35</td>
+						</tr>
+						<tr style="color:green">
+							<td>5</td>
+							<td>The color-coded status of existing flights is properly displayed, using the API. <br></td>
+							<td width="20" align="center">35</td>
+						</tr>
+						<tr style="color:green">
+							<td>6</td>
+							<td>An error message in red is displayed if flight number has fewer or more than five characters. <br>
+							</td>
+							<td width="20" align="center">20</td>
+						</tr>
+						<tr style="color:red">
+							<td>7</td>
+							<td>The page has a nice design, similar to the sample provided (images and background color in the header,
+								two-column layout for destinations, uses CSS or Bootstrap) <br></td>
+							<td width="20" align="center">20</td>
+						</tr>
+
+						<tr style="color:green">
+							<td>8</td>
+							<td>This rubric is properly included AND UPDATED</td>
+							<td width="20" align="center">3</td>
+						</tr>
+
+						<tr>
+							<td></td>
+							<td>T O T A L </td>
+							<td width="20" align="center">153</td>
+						</tr>
+					</tbody></table>
+      </main>
+    </div>
+  </body>
+  <script src="js/app.js"></script>
+</html>
