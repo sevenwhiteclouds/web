@@ -1,4 +1,36 @@
+html, body, p {
+  margin: 0;
+  height: 100%;
+}
+
 body {
-  background-color: #CBE2F6;
+  background-color: #0A192F;
+  color: #EFEFEF;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  display: flex;
+  width: 60%;
+  text-align: left;
+  margin-top: 4%;
+  margin-left: 20%;
+  margin-right: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper p {
+  padding: 2rem;
+}
+
+#home-only {
+  margin-top: 5.5rem;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
 }

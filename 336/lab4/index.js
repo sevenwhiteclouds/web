@@ -10,15 +10,32 @@ app.get("/", (req, res) => {
 });
 
 app.get("/earth", async (req, res) => {
-  let url = `https://api.unsplash.com/photos/random/
-  ?client_id=7756a1e81f817c186cf57294e1c19b37b49c54b8f34e7c499ee
-  0ce5cd86cd16e&featured=true&query=planet-earth`;
-  let response = await fetch(url);
-  let data = await response.json();
-  let image = data.urls.small;
-  res.render("earth", {"earthUrl": image});
+  let image = (await (await fetch(`https://api.unsplash.com/photos/random/?client_id=eRwAda1bLblxTFcB2BzqAy_bD4IAbQIqxAKF4eyMAxA&featured=true&query=planet-earth`)).json()).urls.small;
+  res.render("earth.ejs", {"earthUrl": image});
 });
 
-app.listen(3000, ()=> {
+app.get("/mars", (req, res) => {
+  res.render("mars.ejs");
+});
+
+app.get("/jupiter", (req, res) => {
+  res.render("jupiter.ejs");
+});
+
+app.get("/saturn", (req, res) => {
+  res.render("saturn.ejs");
+});
+
+app.get("/neptune", (req, res) => {
+  res.render("neptune.ejs");
+});
+
+// repl
+//app.listen(3000, ()=> {
+//  console.log("server started");
+//});
+
+// local computer
+app.listen(3000, "localhost", ()=> {
   console.log("server started");
 });
