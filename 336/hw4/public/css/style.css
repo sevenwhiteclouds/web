@@ -1,0 +1,121 @@
+html, body, #wrapper {
+  height: 100%;
+  background: #fdfdfd;
+  color: #443e42;
+}
+
+hr, html, body, p {
+  margin: 0;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  gap: 3rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav p {
+  cursor: pointer;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#content-history {
+  margin-top: 5rem;
+  margin-left: 2.6rem;
+  font-size: 2rem;
+  width: 60%;
+}
+
+#content-writers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+#content-make {
+  margin-top: 2.9rem;
+  margin-left: 8.8rem;
+  font-size: 1.6rem;
+  width: 60%;
+}
+
+#content-inspiration {
+  margin-top: 1.2rem;
+  margin-left: 2.6rem;
+  font-size: 1.8rem;
+  width: 60%;
+}
+
+#content-inspiration h2 {
+  text-align: center;
+}
+
+#circle {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 2px 1px #a6a1a6;
+}
+
+#circle img {
+  width: 100%;
+  height: 100%;
+}
+
+#haiku {
+  margin-left: 3rem;
+  font-size: 3rem;
+}
+
+.square {
+  width: 25rem;
+  height: 25rem;
+  overflow: hidden;
+  box-shadow: 0 0 2px 0px #a6a1a6;
+  position: relative;
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+}
+
+.square p {
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: #fdfdfd;
+}
